@@ -25,8 +25,8 @@ export default function Recipes({ recipes }) {
     <div className="recipe-list">
       <h1 className="whatsapp">
         <Link
-          /* href={`https://api.whatsapp.com/send?phone=4917648737898&text=Quiero hacer una donación..`} */
-          href={`https://web.whatsapp.com/send?phone=4917648737898&text=Hola tengo una consulta Miguel, aparezco en mobil`}
+          href={`https://api.whatsapp.com/send?phone=4917648737898&text=Quiero hacer una donación..`}
+          /* href={`https://web.whatsapp.com/send?phone=4917648737898&text=Hola tengo una consulta Miguel, aparezco en mobil`} */
         >
           <SiWhatsapp />
         </Link>
