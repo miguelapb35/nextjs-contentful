@@ -1,7 +1,5 @@
 import { createClient } from "contentful";
 import RecipeCard from "../components/RecipeCard";
-import { SiWhatsapp } from "react-icons/si";
-import { GiLaptop } from "react-icons/gi";
 import Link from "next/link";
 
 export async function getStaticProps() {
@@ -24,29 +22,6 @@ export default function Recipes({ recipes }) {
   console.log(recipes);
   return (
     <div className="recipe-list">
-      <a
-        title="mobil"
-        className="whatsapp"
-        href={`https://api.whatsapp.com/send?phone=4917648737898&text=Hola, tengo una pregunta...`}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <div className="icon">
-          <SiWhatsapp />
-        </div>
-      </a>
-      <a
-        title="WhatsApp Web"
-        className="whatsappweb"
-        href={`https://web.whatsapp.com/send?phone=4917648737898&text=Hola, tengo una pregunta...`}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <div className="icon">
-          <GiLaptop />
-        </div>
-      </a>
-
       {recipes.map((recipe) => (
         <RecipeCard key={recipe.sys.id} recipe={recipe} />
       ))}
